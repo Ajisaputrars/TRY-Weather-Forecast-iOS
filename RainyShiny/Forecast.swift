@@ -65,9 +65,7 @@ class Forecast {
                 let kelvinToFarenheit = Double(round(10 * kelvinToFarenheitPreDivision/10))
                 
                 self._highTemp = "\(kelvinToFarenheit)"
-                
             }
-            
         }
         
         if let weather = weatherDict["weather"] as? [Dictionary<String, AnyObject>] {

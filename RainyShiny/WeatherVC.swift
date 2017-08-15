@@ -38,6 +38,7 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
         tableView.dataSource = self
         
         currentWeather = CurrentWeather()
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -47,9 +48,11 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
     
     func locationAuthStatus() {
         if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
+            
             currentLocation = locationManager.location
             Location.sharedInstance.latitude = currentLocation.coordinate.latitude
             Location.sharedInstance.longitude = currentLocation.coordinate.longitude
+            
             currentWeather.downloadWeatherDetails {
                 self.downloadForecastData {
                     self.updateUI()
@@ -72,8 +75,8 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
                     for obj in list {
                         let forecast = Forecast(weatherDict: obj)
                         self.forecasts.append(forecast)
-                        print(obj)
                     }
+                    
                     self.forecasts.remove(at: 0)
                     self.tableView.reloadData()
                 }
