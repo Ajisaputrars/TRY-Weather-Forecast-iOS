@@ -114,4 +114,3 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
         currentWeatherImage.image = UIImage(named: currentWeather.WeatherType)
     }
 }
-
