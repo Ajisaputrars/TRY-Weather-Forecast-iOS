@@ -29,7 +29,6 @@ class Forecast {
         return _weatherType
     }
 
-    
     var lowTemp:String {
         if _lowTemp == nil {
             _lowTemp = ""
