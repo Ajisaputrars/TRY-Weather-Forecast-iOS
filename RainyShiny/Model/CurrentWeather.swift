@@ -67,7 +67,6 @@ class CurrentWeather {
                         self._weatherType = main.capitalized
                         print(self._weatherType)
                     }
-                    
                 }
                 
                 if let main = dict["main"] as? Dictionary<String, AnyObject> {
