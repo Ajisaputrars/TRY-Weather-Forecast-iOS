@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0900"
+   LastUpgradeVersion = "0700"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "40813D30E07E676A75C21F3AA066DBF3"
+               BlueprintIdentifier = "B4F8AA600665B2F9704DC40AD8C99CEB"
                BuildableName = "Pods_RainyShiny.framework"
                BlueprintName = "Pods-RainyShiny"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "40813D30E07E676A75C21F3AA066DBF3"
+            BlueprintIdentifier = "B4F8AA600665B2F9704DC40AD8C99CEB"
             BuildableName = "Pods_RainyShiny.framework"
             BlueprintName = "Pods-RainyShiny"
             ReferencedContainer = "container:Pods.xcodeproj">
