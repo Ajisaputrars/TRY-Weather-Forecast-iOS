@@ -55,7 +55,6 @@ class CurrentWeather {
     func downloadWeatherDetails(completed: @escaping DownloadComplete) {
         Alamofire.request(CURRENT_WEATHER_URL).responseJSON { response in
             let json = JSON(response.result.value!)
-            
             let name = json["name"].stringValue
             self._cityName = name.capitalized
             
@@ -66,9 +65,6 @@ class CurrentWeather {
                 }
             }
             
-//            let currentTemperatureInRawNumber1 = json["main"]["temp"].object as? Double
-//            print("Current Weather Temperature adalah \(currentTemperatureInRawNumber1)")
-            
             if let currentTemperatureInRawNumber = json["main"]["temp"].object as? Double {
                 let kelvinToFarenheitPreDivision = (currentTemperatureInRawNumber * (9/5) - 459.67)
                 let kelvinToFarenheit = Double(round(10 * kelvinToFarenheitPreDivision/10))
@@ -76,56 +72,6 @@ class CurrentWeather {
                 
                 print("Current Weather Temperature adalah \(kelvinToFarenheit)")
             }
-            
-            
-            //            if let main = json["main"] as? Dictionary<String, AnyObject>{
-            //                print("Main untuk kelvin yang baru adalah \(main)")
-            //                if let currentTemperature = main["temp"] as? Double {
-            //
-            //                    let kelvinToFarenheitPreDivision = (currentTemperature * (9/5) - 459.67)
-            //
-            //                    let kelvinToFarenheit = Double(round(10 * kelvinToFarenheitPreDivision/10))
-            //
-            //                    self._currentTemp = kelvinToFarenheit
-            //                    print("Current Temo yang baru adalah \(kelvinToFarenheit)")
-            //                }
-            //            }
-            
-            print("Ini Name dari Current Weather = \(name)")
-            
-            
-            print("Ini JSON dari Current Weather = \(json)")
-            
-            
-            //            let result = response.result
-            //            if let dict = result.value as? Dictionary<String, AnyObject> {
-            //
-            //                if let name = dict["name"] as? String {
-            //                    self._cityName = name.capitalized
-            //                    print(self._cityName)
-            //                }
-            //
-            //                if let weather = dict["weather"] as? [Dictionary<String, AnyObject>] {
-            //
-            //                    if let main = weather[0]["main"] as? String {
-            //                        self._weatherType = main.capitalized
-            //                        print(self._weatherType)
-            //                    }
-            //                }
-            //
-            //                if let main = dict["main"] as? Dictionary<String, AnyObject> {
-            //
-            //                    if let currentTemperature = main["temp"] as? Double {
-            //
-            //                        let kelvinToFarenheitPreDivision = (currentTemperature * (9/5) - 459.67)
-            //
-            //                        let kelvinToFarenheit = Double(round(10 * kelvinToFarenheitPreDivision/10))
-            //
-            //                        self._currentTemp = kelvinToFarenheit
-            //                        print(self._currentTemp)
-            //                    }
-            //                }
-            //            }
             completed()
         }
     }
