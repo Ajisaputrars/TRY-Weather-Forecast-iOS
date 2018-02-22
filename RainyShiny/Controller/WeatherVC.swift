@@ -68,14 +68,18 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, C
         let forecastURL = URL(string: FORECAST_URL)!
         Alamofire.request(forecastURL).responseJSON { response in
             let json = JSON(response.result.value!)
+            print("Nih Value dari json WeatherVC = \(json)")
+            
             if let resData = json["list"].arrayObject as? [Dictionary<String, AnyObject>] {
-                print("Nih respon jsonnya = \(resData)")
                 for obj in resData{
                     let forecast = Forecast(weatherDict: obj)
                     self.forecasts.append(forecast)
                 }
                 self.forecasts.remove(at: 0)
                 self.tableView.reloadData()
+                
+                print("Nih URL nya" + FORECAST_URL)
+                print("Nih respon jsonnya = \(resData)")
             }
             completed()
         }
