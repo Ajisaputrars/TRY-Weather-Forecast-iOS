@@ -1,6 +1,11 @@
 # **TRY-Weather-Forecast-iOS**
+This is a simple app that demonstrate how to get location from an iOS device (real device) and use the information to get weather forecast from third-party service. In this app, we use OpenWeatherMap.org API.
 
 ### **Features**
+This app has several features:
+1. Users have access weather information of their location based on the information from their device automatically. No need to setup location manually.
+2. Users can access 7 days weather forecast from OpenWeatherMap.org API.
+
 
 ### **Author**
 
