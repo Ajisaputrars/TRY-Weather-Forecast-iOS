@@ -6,7 +6,7 @@ This app has several features:
 1. Users have access weather information of their location based on the information from their device automatically. No need to setup location manually.
 2. Users can access 7 days weather forecast from OpenWeatherMap.org API.
 
-<img src="https://github.com/Ajisaputrars/TRY-Weather-Forecast-iOS/blob/master/SS1.png" width="200" height="490">
+<img src="https://github.com/Ajisaputrars/TRY-Weather-Forecast-iOS/blob/master/SS1.png" width="200">
 
 
 ### **Author**
