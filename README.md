@@ -21,4 +21,4 @@ This project is free and open. You can participate to this project to make even 
 This project is licensed under the GNU General Public License v3.0 - see the [**LICENSE.md**][2] file for details.
 
 [1]:	https://github.com/Ajisaputrars
-[2]:	https://github.com/Ajisaputrars/Submission-2-Football-Match-Schedule-App-Swift-iOS/blob/master/LICENSE
+[2]:	https://github.com/Ajisaputrars/TRY-Weather-Forecast-iOS/blob/master/LICENSE
